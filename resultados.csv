@@ -1,0 +1,7 @@
+tamanho_matriz,elementos_por_thread_processo,tempo_medio_sequencial,tempo_medio_threads,tempo_medio_processos
+100,1250,7,0,0
+200,5000,61,13,14
+400,20000,516,108,108
+800,80000,4060,944,945
+1600,320000,43287,9584,9600
+3200,1280000,396579,91706,98080
