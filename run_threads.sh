@@ -11,7 +11,7 @@ do
     do
         new_tempo=$(tail -1 $filename)
         tempo=$(( tempo > new_tempo ? tempo : new_tempo ))
-        mv $filename $tentativa"__"$filename
+        rm $filename
     done
     soma_tempos=$((soma_tempos + tempo))
 done

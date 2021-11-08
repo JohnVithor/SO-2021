@@ -9,7 +9,7 @@ do
     for filename in $files
     do
         tempo=$(tail -1 $filename)
-        mv $filename $tentativa"__"$filename
+        rm $filename
     done
     soma_tempos=$((soma_tempos + tempo))
 done
