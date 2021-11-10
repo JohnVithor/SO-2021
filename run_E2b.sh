@@ -8,13 +8,12 @@ processos_medio=0
 i=0
 
 p_i=$((((3200*3200)+7)/8))
-p_fa=$((p_i/4))
-p_fb=$((((3200*3200)+1)/2))
-increment=$(((p_fa-p_i)/4))
+p_f=$((((3200*3200)+1)/2))
+increment=$(((p_f-p_i)/4))
 
 echo -e "elementos_por_thread_processo,tempo_medio_threads,tempo_medio_processos"
 
-for ((i=p_i;i>=p_fa;i=i-p_fa))
+for ((i=p_i;i>=p_f;i=i+p_i))
 do
     mv "3200matrix1.data" "matrix1.data"
     mv "3200matrix2.data" "matrix2.data"
