@@ -13,7 +13,7 @@ increment=$(((p_f-p_i)/4))
 
 echo -e "elementos_por_thread_processo,tempo_medio_threads,tempo_medio_processos"
 
-for ((i=p_i;i>=p_f;i=i+p_i))
+for ((i=p_i;i<=p_f;i=i+p_i))
 do
     mv "3200matrix1.data" "matrix1.data"
     mv "3200matrix2.data" "matrix2.data"

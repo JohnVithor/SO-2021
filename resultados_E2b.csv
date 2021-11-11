@@ -1,0 +1,5 @@
+elementos_por_thread_processo,tempo_medio_threads,tempo_medio_processos
+1280000,38284,40374
+2560000,45364,45319
+3840000,66086,66281
+5120000,84432,84279
