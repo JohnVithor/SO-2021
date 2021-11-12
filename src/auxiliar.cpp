@@ -35,7 +35,7 @@ int main(int argc, char const *argv[]) {
 
     std::ofstream outdata;
     {
-        std::srand(std::time(0));
+        std::srand(std::time(NULL));
         double** A = createEmptyMatrix(n1, m1);
         for (size_t i = 0; i < n1; ++i) {
             for (size_t j = 0; j < m1; ++j) {
@@ -59,7 +59,7 @@ int main(int argc, char const *argv[]) {
         delete [] A;
     }
     {
-        std::srand(std::time(0)+1);
+        std::srand(std::time(NULL)+1);
         double** B = createEmptyMatrix(n2, m2);
         for (size_t i = 0; i < n2; ++i) {
             for (size_t j = 0; j < m2; ++j) {
