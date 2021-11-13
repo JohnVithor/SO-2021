@@ -9,6 +9,8 @@ processos_medio=0
 pf=$(((3200*3200)/6))
 pl=$(((3200*3200)/12))
 pl2=$(((3200*3200)/24))
+pl3=$(((3200*3200)/36))
+pl4=$(((3200*3200)/48))
 
 echo -e "elementos_por_thread_processo,tempo_medio_threads,tempo_medio_processos"
 
@@ -26,6 +28,14 @@ echo -e "$pl,$threads_medio,$processos_medio"
 threads_medio=$(./run_threads.sh $tentativa $pl2)
 processos_medio=$(./run_processos.sh $tentativa $pl2)
 echo -e "$pl2,$threads_medio,$processos_medio"
+
+threads_medio=$(./run_threads.sh $tentativa $pl3)
+processos_medio=$(./run_processos.sh $tentativa $pl3)
+echo -e "$pl3,$threads_medio,$processos_medio"
+
+threads_medio=$(./run_threads.sh $tentativa $pl4)
+processos_medio=$(./run_processos.sh $tentativa $pl4)
+echo -e "$pl4,$threads_medio,$processos_medio"
 
 mv "matrix1.data" "3200matrix1.data"
 mv "matrix2.data" "3200matrix2.data"

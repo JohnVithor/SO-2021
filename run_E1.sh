@@ -13,7 +13,7 @@ while [ $sequencial_medio -le $tempo_maximo ]
 do
     t=$((2 * t))
     ./bin/auxiliar $t $t $t $t
-    p=$((((t*t)+7)/8))
+    p=$(((t*t)/8))
     sequencial_medio=$(./run_sequencial.sh $tentativa)
     threads_medio=$(./run_threads.sh $tentativa $p)
     processos_medio=$(./run_processos.sh $tentativa $p)
