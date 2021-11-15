@@ -19,7 +19,6 @@ double** createEmptyMatrix(size_t linhas, size_t colunas) {
 
 double random_double() {
     return (double) rand() / RAND_MAX;
-
 }
 
 int main(int argc, char const *argv[]) {
