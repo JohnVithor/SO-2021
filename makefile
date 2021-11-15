@@ -13,16 +13,16 @@ all: dir auxiliar sequencial threads processos
 debug: CFLAGS += -g -O0 -pg
 debug: auxiliar sequencial threads processos
 
-sequencial: $(OBJ_DIR)/sequencial.o $(OBJ_DIR)/matrix.o
+sequencial: $(OBJ_DIR)/sequencial.o
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 
-threads: $(OBJ_DIR)/threads.o $(OBJ_DIR)/matrix.o
+threads: $(OBJ_DIR)/threads.o
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^ -pthread
 
-processos: $(OBJ_DIR)/processos.o $(OBJ_DIR)/matrix.o
+processos: $(OBJ_DIR)/processos.o
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 
-auxiliar: $(OBJ_DIR)/auxiliar.o $(OBJ_DIR)/matrix.o
+auxiliar: $(OBJ_DIR)/auxiliar.o
 	$(CC) $(CFLAGS) -o $(BIN_DIR)/$@ $^
 
 $(OBJ_DIR)/sequencial.o: $(SRC_DIR)/sequencial.cpp
@@ -35,9 +35,6 @@ $(OBJ_DIR)/processos.o: $(SRC_DIR)/processos.cpp
 	$(CC) -c $(CFLAGS) -o $@ $<	
 
 $(OBJ_DIR)/auxiliar.o: $(SRC_DIR)/auxiliar.cpp
-	$(CC) -c $(CFLAGS) -o $@ $<	
-
-$(OBJ_DIR)/matrix.o: $(SRC_DIR)/matrix.cpp
 	$(CC) -c $(CFLAGS) -o $@ $<	
 
 dir:
